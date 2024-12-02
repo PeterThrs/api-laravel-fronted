@@ -1,0 +1,70 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+}
+
+.fondo {
+  width: 100%;
+  /* background-image: url("../../assets/space.png");  */
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.658),
+      rgba(0, 0, 0, 0.368)
+    ),
+    url("../../assets/img/boat.jpg");
+  background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centro {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    0deg,
+    rgba(225, 215, 163, 0.801),
+    rgba(183, 79, 110, 0.546)
+  );
+  border-radius: 30px;
+}
+
+mat-card {
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+mat-card-header {
+  display: block;
+  text-align: center;
+  color: rgb(25, 25, 152);
+  margin-bottom: 25px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) { 
+  .centro {
+    width: 60%;
+  }
+}
+
+@media (max-width: 780px) {
+  .centro {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+

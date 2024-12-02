@@ -1,0 +1,98 @@
+@if(modo === 'ver'){
+    <h2 mat-dialog-title class="modal-title">Detalles</h2>
+    <mat-dialog-content class="mat-typography modal-container">
+      <!-- Imagen del fondo -->
+      <div class="image-container">
+        <img
+          class="poster-image"
+          [src]="usuario.img_url"
+          alt="Imagen"
+        />
+      </div>
+    
+      <!-- Contenido del modal -->
+      <div class="modal-content">
+        <h1 class="movie-title">{{ usuario.name }}</h1>
+        <p class="movie-description">
+          <strong>Email:</strong> {{ usuario.email }}
+        </p>
+        <p><strong>Password:</strong> {{ usuario.password }}</p>
+        <p>
+          <strong>Telefono:</strong> {{ usuario.phone }}
+        </p>
+        
+        
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-raised-button color="primary" mat-dialog-close>Volver</button>
+    </mat-dialog-actions>
+    } @else {
+    <h2 mat-dialog-title class="modal-title">Editar</h2>
+    <mat-dialog-content class="mat-typography modal-container">
+      <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+        <!-- Título -->
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput [(ngModel)]="usuario.name" name="name" required />
+        </mat-form-field>
+
+        <!-- Título Original -->
+        <mat-form-field appearance="outline">
+          <mat-label>Telefono</mat-label>
+          <input
+            matInput
+            [(ngModel)]="usuario.phone"
+            name="phone"
+            required
+          />
+        </mat-form-field>
+    
+        <!-- Título Original -->
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            [(ngModel)]="usuario.email"
+            name="email"
+            required
+          />
+        </mat-form-field>
+    
+        <!-- Descripción -->
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <textarea
+            matInput
+            [(ngModel)]="usuario.password"
+            name="password"
+            required
+          ></textarea>
+        </mat-form-field>
+
+        <!-- Idioma Original -->
+        <mat-form-field appearance="outline">
+          <mat-label>Url imagen</mat-label>
+          <input
+            matInput
+            [(ngModel)]="usuario.img_url"
+            name="img_url"
+            required
+          />
+        </mat-form-field>
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="usuarioForm.invalid"
+          >
+            Guardar
+          </button>
+          <button type="button" mat-button color="warn" (click)="onClose()">Cancelar</button>
+        </mat-dialog-actions>
+      </form>
+    </mat-dialog-content>
+    
+    }
+    
