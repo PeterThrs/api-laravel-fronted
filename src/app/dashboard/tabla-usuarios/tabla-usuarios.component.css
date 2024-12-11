@@ -19,15 +19,22 @@ table {
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  background-color: white;
-  border: 1px solid #1469C0;
-  color: #1469C0;
+.btn-primary {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 1px 30px;
+  cursor: pointer;
 }
 
-.mat-mdc-form-field {
-  font-size: 14px;
-  width: 50%;
+.btn-primary:hover {
+  background-color: #218838;
+  border: 1px solid #218838;
+  color: white;
 }
 
 .container {
@@ -97,4 +104,12 @@ table tr:hover {
   &:hover {
     background-color: rgba(0, 0, 0, 0.1); /* Efecto hover más sutil */
   }
+}
+
+.empty-table-message {
+  width: 100%;
+  text-align: center;
+  color: gray;
+  font-size: 20px;
+  margin-top: 25px;
 }

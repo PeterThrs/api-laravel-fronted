@@ -10,6 +10,7 @@ import { Planta } from '../../models/planta';
 import Swal from 'sweetalert2';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalPlantaComponent } from './modal-planta/modal-planta.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tabla-plantas',
@@ -20,7 +21,8 @@ import { ModalPlantaComponent } from './modal-planta/modal-planta.component';
     MatFormFieldModule,
     MatInputModule,
     MatSortModule,
-    MatIcon
+    MatIcon,
+    CommonModule
   ],
   templateUrl: './tabla-plantas.component.html',
   styleUrl: './tabla-plantas.component.css'
@@ -29,7 +31,7 @@ export class TablaPlantasComponent implements OnInit,AfterViewInit{
   
   modo: string = '';
   plantas: Planta[];
-  displayedColumns: string[] = ['id',  'imagen', 'nombre_comun','accion'];
+  displayedColumns: string[] = ['id', 'nombre_comun', 'nombre_cientifico', 'accion'];
   dataSource = new MatTableDataSource<Planta>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

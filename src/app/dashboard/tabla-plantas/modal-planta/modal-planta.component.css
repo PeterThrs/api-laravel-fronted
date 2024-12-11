@@ -23,16 +23,6 @@
     text-align: center;
   }
   
-  h1 {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-  }
-  
-  h2 {
-    background-color: #272838;
-    color: white;
-  }
-  
   ::ng-deep .mat-mdc-dialog-container .mat-mdc-dialog-title {
     color: white;
   }
@@ -42,6 +32,9 @@
     .mat-mdc-dialog-title
     + .mat-mdc-dialog-content {
     padding-top: 20px;
+  }
+  .modal-title{
+    background-color: #51295b;
   }
   
   h3 {
@@ -77,4 +70,31 @@
   button {
     margin: 8px 0;
   }
-  
+  /* Nombre científico en cursiva */
+
+  .planta-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.planta-title,
+.planta-description {
+    margin: 0; /* Elimina los márgenes de ambos elementos */
+
+}
+.planta-description {
+  font-style: italic;
+  color: gray;
+}
+
+.property-container {
+  display: flex;
+  justify-content: space-between; /* Espaciado uniforme entre elementos */
+  align-items: center; /* Alineación vertical */
+  margin-top: 1rem; /* Separación superior del resto del contenido */
+  gap: 1rem; /* Espaciado entre cada propiedad */
+}
+
+/* Estilo de los textos individuales */
+

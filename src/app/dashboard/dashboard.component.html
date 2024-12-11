@@ -3,7 +3,12 @@
     <button mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Inicio</span>
+    <p class="welcome-message">
+      Bienvenido
+        @if(usuario){
+          <a>: {{logeadoService.getUsuario()?.name}}</a>
+        }
+    </p>
     <span class="spacer"></span>
     <div mat-icon-button [matMenuTriggerFor]="menu" class="avatar-button">
       <img
@@ -19,16 +24,20 @@
 
   <mat-drawer-container class="drawer-container">
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <div class="welcome-section">
-        <p class="welcome-message">
-          Bienvenido, <span>{{ logeadoService.getUsuario()?.name }}</span>
-        </p>
-      </div>
-      <p>Menú</p>
-      <button mat-button routerLink="usuarios">Usuarios</button>
+        <span>MENÚ</span>
+        <mat-nav-list>
+          <a mat-list-item (click)="user()" routerLinkActive="active-link"> 
+            <mat-icon>person</mat-icon> USUARIOS </a>
+          <a mat-list-item (click)="plant()" routerLinkActive="active-link">
+              <mat-icon>local_florist</mat-icon> PLANTAS </a> 
+          <a mat-list-item (click)="salir()" routerLinkActive="active-link"> 
+            <mat-icon>exit_to_app</mat-icon> SALIR </a>
+        </mat-nav-list>
+      </mat-drawer>
+       
+      <!-- <button mat-button routerLink="usuarios">Usuarios</button>
       <button mat-button routerLink="peliculas">Películas</button>
-      <button mat-button (click)="salir()">Salir</button>
-    </mat-drawer>
+      <button mat-button (click)="salir()">Salir</button> -->
 
     <mat-drawer-content>
       <div class="example-sidenav-content">

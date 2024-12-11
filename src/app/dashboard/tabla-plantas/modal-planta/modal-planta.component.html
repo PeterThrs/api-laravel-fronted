@@ -12,23 +12,22 @@
     
       <!-- Contenido del modal -->
       <div class="modal-content">
-        <h1 class="movie-title">{{ planta.nombre_comun }}</h1>
-        <p class="movie-description">
-        <strong></strong> {{ planta.nombre_cientifico }}
-        </p>
-        <p><strong>Familia:</strong> {{ planta.familia }}</p>
-        <p>
-          <strong>Tipo:</strong> {{ planta.tipo }}
-        </p>
-        <p>
-            <strong>Origen:</strong> {{ planta.origen }}
-          </p>
-          <p>
-            <strong>Descripcion:</strong> {{ planta.descripcion }}
-          </p>
-         
-         
+        <div class="planta-info">
+          <h1 class="planta-title">{{ planta.nombre_comun }}</h1>
+          <p class="planta-description">{{ planta.nombre_cientifico }}</p>
       </div>
+<br>
+        <!-- <p style="margin-top: 0;">{{ planta.nombre_cientifico }}</p>         -->
+        <div class="property-container">
+            <p><strong>Familia:</strong> {{ planta.familia }}</p>
+            <p><strong>Tipo:</strong> {{ planta.tipo }}</p>
+            <p><strong>Origen:</strong> {{ planta.origen }}</p>
+        </div>
+        <br>
+        <p class="movie-description">{{ planta.descripcion }}</p>
+    </div>
+    
+    
     </mat-dialog-content>
     <mat-dialog-actions align="end">
       <button mat-raised-button color="primary" mat-dialog-close>Volver</button>

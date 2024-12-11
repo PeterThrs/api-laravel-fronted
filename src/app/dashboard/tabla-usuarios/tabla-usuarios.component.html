@@ -6,13 +6,12 @@
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. name" #input>
     </mat-form-field>
     <button mat-flat-button (click)="agregar()" class="btn-primary">
-      Agregar
+      Nuevo
     </button>
     
   </div>
   
   
-
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" class="table-striped table-bordered " matSort>
       <!-- Position Column -->
@@ -57,8 +56,13 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
 
+      
+  
+  </table>
+  <div *ngIf="dataSource.data.length === 0" class="empty-table-message fixed-table-container" style="justify-content: center;">
+    No hay usuarios agregados
+  </div>
     <mat-paginator
       [pageSizeOptions]="[5, 10, 20]"
       showFirstLastButtons
@@ -66,4 +70,5 @@
     >
     </mat-paginator>
   </div>
+
 </div>

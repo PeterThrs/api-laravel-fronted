@@ -10,6 +10,7 @@ import { UsuarioLoggedService } from '../services/usuario-logged.service';
 import { Usuario } from '../models/usuario';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIcon } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-dashboard',
@@ -24,8 +25,9 @@ import { MatIcon } from '@angular/material/icon';
     RouterLink,
     MatMenuModule,
     MatSidenavModule,
-    MatIcon
-  ],
+    MatIcon,
+    MatListModule
+    ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -70,4 +72,12 @@ export class DashboardComponent implements OnInit{
     
   }
 
+  user(){
+    this.router.navigate(['/dashboard/usuarios']);  
+
+  }
+  plant(){
+    this.router.navigate(['/dashboard/plantas']);  
+
+  }
 }

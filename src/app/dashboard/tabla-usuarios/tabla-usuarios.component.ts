@@ -10,6 +10,7 @@ import { MatIcon } from '@angular/material/icon';
 import { ModalUsuarioComponent } from './modal-usuario/modal-usuario.component';
 import { MatDialog } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tabla-usuarios',
@@ -20,7 +21,8 @@ import Swal from 'sweetalert2';
     MatFormFieldModule,
     MatInputModule,
     MatSortModule,
-    MatIcon
+    MatIcon,
+    CommonModule
   ],
   templateUrl: './tabla-usuarios.component.html',
   styleUrl: './tabla-usuarios.component.css'
