@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TablaUsuariosComponent } from './dashboard/tabla-usuarios/tabla-usuarios.component';
-import { TablaPeliculasComponent } from './dashboard/tabla-peliculas/tabla-peliculas.component';
+import { TablaPlantasComponent } from './dashboard/tabla-plantas/tabla-plantas.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -10,6 +10,7 @@ export const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent, children: [
         { path: '', redirectTo: 'usuarios', pathMatch: 'full' },
         { path: 'usuarios', component: TablaUsuariosComponent },
-        { path: 'peliculas', component: TablaPeliculasComponent },
+        { path: 'plantas', component: TablaPlantasComponent },
+
     ]},
 ];

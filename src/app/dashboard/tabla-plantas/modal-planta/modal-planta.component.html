@@ -1,0 +1,122 @@
+@if(modo === 'ver'){
+    <h2 mat-dialog-title class="modal-title">Detalles</h2>
+    <mat-dialog-content class="mat-typography modal-container">
+      <!-- Imagen del fondo -->
+      <div class="image-container">
+        <img
+          class="poster-image"
+          [src]="planta.imagen"
+          alt="Imagen"
+        />
+      </div>
+    
+      <!-- Contenido del modal -->
+      <div class="modal-content">
+        <h1 class="movie-title">{{ planta.nombre_comun }}</h1>
+        <p class="movie-description">
+        <strong></strong> {{ planta.nombre_cientifico }}
+        </p>
+        <p><strong>Familia:</strong> {{ planta.familia }}</p>
+        <p>
+          <strong>Tipo:</strong> {{ planta.tipo }}
+        </p>
+        <p>
+            <strong>Origen:</strong> {{ planta.origen }}
+          </p>
+          <p>
+            <strong>Descripcion:</strong> {{ planta.descripcion }}
+          </p>
+         
+         
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-raised-button color="primary" mat-dialog-close>Volver</button>
+    </mat-dialog-actions>
+    } @else {
+    <h2 mat-dialog-title class="modal-title">Editar</h2>
+    <mat-dialog-content class="mat-typography modal-container">
+      <form (ngSubmit)="onSubmit()" #plantaForm="ngForm">
+        <!-- Título -->
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre Comun</mat-label>
+          <input matInput [(ngModel)]="planta.nombre_comun" name="nombre_comun" required />
+        </mat-form-field>
+
+        <!-- Título Original -->
+         <mat-form-field appearance="outline">
+          <mat-label>Nombre Cientifico</mat-label>
+          <input
+            matInput
+            [(ngModel)]="planta.nombre_cientifico"
+            name="nombre_cientifco"
+            required
+          />
+        </mat-form-field> 
+    
+        <!-- Título Original -->
+        <mat-form-field appearance="outline">
+            <mat-label>Familia</mat-label>
+            <input
+              matInput
+              [(ngModel)]="planta.familia"
+              name="familia"
+              required
+            />
+          </mat-form-field> 
+
+          <mat-form-field appearance="outline">
+            <mat-label>Tipo</mat-label>
+            <input
+              matInput
+              [(ngModel)]="planta.tipo"
+              name="tipo"
+              required
+            />
+          </mat-form-field> 
+
+          <mat-form-field appearance="outline">
+            <mat-label>Origen</mat-label>
+            <input
+              matInput
+              [(ngModel)]="planta.origen"
+              name="origen"
+              required
+            />
+          </mat-form-field> 
+
+          <mat-form-field appearance="outline">
+            <mat-label>Descripcion</mat-label>
+            <input
+              matInput
+              [(ngModel)]="planta.descripcion"
+              name="descripcion"
+              required
+            />
+          </mat-form-field> 
+
+        <!-- Idioma Original -->
+        <mat-form-field appearance="outline">
+          <mat-label>Url imagen</mat-label>
+          <input
+            matInput
+            [(ngModel)]="planta.imagen"
+            name="imagen"
+            required
+          />
+        </mat-form-field>
+        <mat-dialog-actions align="end">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="plantaForm.invalid"
+          >
+            Guardar
+          </button>
+          <button type="button" mat-button color="warn" (click)="onClose()">Cancelar</button>
+        </mat-dialog-actions>
+      </form>
+    </mat-dialog-content>
+    }
+    

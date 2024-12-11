@@ -2,9 +2,32 @@ table {
     width: 100%;
   }
   
+  .row {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .btn-primary {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    background-color: #1469C0;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 1px 30px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: white;
+    border: 1px solid #1469C0;
+    color: #1469C0;
+  }
+  
   .mat-mdc-form-field {
     font-size: 14px;
-    width: 100%;
+    width: 50%;
   }
   
   .container {
@@ -53,12 +76,12 @@ table {
   .table-bordered td, .table-bordered th {
     border: 1px solid #ddd;
   }
-
+  
+  
   .acciones-cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
     gap: 8px; 
     padding: 0; 
   }
@@ -75,6 +98,3 @@ table {
       background-color: rgba(0, 0, 0, 0.1); /* Efecto hover más sutil */
     }
   }
-  
-  
-  
