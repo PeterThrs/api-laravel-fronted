@@ -60,11 +60,12 @@ ng serve
    - Este sistema asegura que solo los usuarios autorizados puedan acceder a ciertas funcionalidades específicas.
    -En caso contrario que las contraseñas ingresadas sean incorrectas mostrara un mensaje d elerta y no dejara ingresar.
 
+Login:
+![Login](src/assets/img-reporte/login.png)
 
 <div style="display: flex; justify-content: space-between; width: 100%;">
-  <img src="src/assets/img-reporte/login.png" alt="Login" style="width: 32%; margin: 0 1%;">
-  <img src="src/assets/img-reporte/bien.png" alt=Camposcorrectos" style="width: 32%; margin: 0 1%;">
-  <img src="src/assets/img-reporte/mal.png" alt="Camposincorrectos" style="width: 32%; margin: 0 1%;">
+  <img src="src/assets/img-reporte/bien.png" alt=Camposcorrectos" style="width: 45%; margin: 0 1%;">
+  <img src="src/assets/img-reporte/mal.png" alt="Camposincorrectos" style="width: 45%; margin: 0 1%;">
 </div>
 
 
@@ -116,5 +117,7 @@ La tabla de usuarios muestra los siguientes campos:
   <img src="src/assets/img-reporte/eliminarus.jpeg" alt="eliminar" style="width: 32%; margin: 0 1%;">
 </div>
 
-**✒️Pedro López** - [PeterThrs 👾](https://github.com/PeterThrs)
-**✒️Ilian Morales** - [iliMorales 💜](https://github.com/Ilimm9)
+## ✒️ Autores 
+   - Pedro López** - [PeterThrs 👾](https://github.com/PeterThrs)
+
+   - Ilian Morales** - [iliMorales 💜](https://github.com/Ilimm9)
