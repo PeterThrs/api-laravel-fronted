@@ -1,5 +1,4 @@
-# Aplicación de Usuarios y Plantas - Frontend
-
+# Aplicación de Usuarios y Plantas - Frontend🖥
 Este proyecto es el frontend para una aplicación de gestión de usuarios y plantas. Está construido con Angular y Material Design.
 
 ## 📌Características
@@ -63,9 +62,10 @@ ng serve
 Login:
 ![Login](src/assets/img-reporte/login.png)
 
+- **Mensajes credenciasles correctas e incorectas**
 <div style="display: flex; justify-content: space-between; width: 100%;">
-  <img src="src/assets/img-reporte/bien.png" alt=Camposcorrectos" style="width: 45%; margin: 0 1%;">
-  <img src="src/assets/img-reporte/mal.png" alt="Camposincorrectos" style="width: 45%; margin: 0 1%;">
+  <img src="src/assets/img-reporte/bien.png" alt=Camposcorrectos" style="width: 50%; margin: 0 1%;">
+  <img src="src/assets/img-reporte/mal.png" alt="Camposincorrectos" style="width: 050%; margin: 0 1%;">
 </div>
 
 
@@ -84,10 +84,13 @@ Login:
 4. **Boton "Nuevo"**:
    - Botón en el que se crea un nuevo elemento dependiendo de la interfaz en el que nos encontremos.
 
-   Interfaz(Tabla):
+ Interfaz(Tabla):
 ![Interfaz](src/assets/img-reporte/interfaz.png)
 
+Boton(Nuevo):
+![Boton](src/assets/img-reporte/nuevo.jpeg)
 
+  
 ## Campos de la Tabla
 
 La tabla de plantas muestra los siguientes campos:
