@@ -65,7 +65,7 @@ Login:
 - **Mensajes credenciasles correctas e incorectas**
 <div style="display: flex; justify-content: space-between; width: 100%;">
   <img src="src/assets/img-reporte/bien.png" alt=Camposcorrectos" style="width: 50%; margin: 0 1%;">
-  <img src="src/assets/img-reporte/mal.png" alt="Camposincorrectos" style="width: 050%; margin: 0 1%;">
+  <img src="src/assets/img-reporte/mal.png" alt="Camposincorrectos" style="width: 50%; margin: 0 1%;">
 </div>
 
 
